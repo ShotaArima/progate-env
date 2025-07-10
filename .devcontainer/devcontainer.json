@@ -1,0 +1,17 @@
+{
+  "name": "Progate Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "progate.progate-assistant"
+      ]
+    }
+  },
+  "postCreateCommand": "progate-cli --version"
+}
