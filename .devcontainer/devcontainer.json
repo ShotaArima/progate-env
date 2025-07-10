@@ -1,0 +1,21 @@
+{
+  "name": "Progate Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  // 「ホストのローカルワークスペース」を /root/progate_path にバインド
+  "workspaceMount": "source=${localWorkspaceFolder},target=/root/progate_path,type=bind,consistency=cached",
+  // VS Code が開くワークスペースをコンテナ内の /root/progate_path に
+  "workspaceFolder": "/root/progate_path",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "progate.progate-assistant"
+      ]
+    }
+  },
+  "postCreateCommand": "progate-cli --version"
+}
