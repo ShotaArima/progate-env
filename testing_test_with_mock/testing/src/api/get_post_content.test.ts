@@ -17,7 +17,12 @@ describe("getPostContent", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-
+  test("returns correct data", async () => {
+    const ret = await getPostContent(1);
+    expect(ret).toBe("Mock Post Content");
+    expect(fetchPost).toHaveBeenCalledWith(1);
+    expect(fetchPost).toBeCalledTimes(1);
+  });
 
   test("returns null on fetchPost failure", async () => {
     const ret = await getPostContent(-1);
