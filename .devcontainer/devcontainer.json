@@ -13,7 +13,8 @@
         "terminal.integrated.shell.linux": "/bin/bash"
       },
       "extensions": [
-        "progate.progate-assistant"
+        "progate.progate-assistant",
+	"esbenp.prettier-vscode"
       ]
     }
   },
