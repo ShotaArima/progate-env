@@ -15,4 +15,4 @@ RUN curl -sSfL https://assets.path.progate.com/cli-installer/out/setup.sh -o /tm
 RUN cat /tmp/setup.sh
 RUN yes | bash -x /tmp/setup.sh
 
-WORKDIR progate_path
+WORKDIR /root/progate_path
