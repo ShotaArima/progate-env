@@ -11,13 +11,8 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
-COPY setup.sh /tmp/setup.sh
+RUN curl -sSfL https://assets.path.progate.com/cli-installer/out/setup.sh -o /tmp/setup.sh
+RUN cat /tmp/setup.sh
+RUN yes | bash -x /tmp/setup.sh
 
-WORKDIR /workspace
-
-RUN bash /tmp/setup.sh
-
-# 作業ディレクトリの設定
-
-
-RUN bash progate -v
+WORKDIR progate_path
