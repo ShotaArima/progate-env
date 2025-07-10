@@ -1,1 +1,1 @@
-const randomNumber = Math.rando();
+const randomNumber = Math.random();
